@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0d3b66;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0d3b66;
+    padding-bottom: 0.5rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #0d3b66;
+    font-size: 1.5rem;
+}
+
+/* Workflow Cards */
+.workflows-container {
+    margin-bottom: 2rem;
+}
+
+.workflow-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.workflow-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 1rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.workflow-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #0d3b66;
+}
+
+.workflow-card.selected {
+    border-color: #0d3b66;
+    background-color: #e6f2ff;
+}
+
+.workflow-card h3 {
+    margin-top: 0;
+    color: #0d3b66;
+}
+
+.workflow-card p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+/* Query Container */
+.query-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Data Sections */
+.data-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+.data-section h3 {
+    margin-top: 0;
+    color: #0d3b66;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.data-content {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Logs */
+.logs-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.logs-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logs-list li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.log-error {
+    color: #dc3545;
+}
+
+.log-warning {
+    color: #ffc107;
+}
+
+.log-info {
+    color: #0d6efd;
+}
+
+/* Loading */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.loading-spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #0d3b66;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Results */
+.results-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.rules-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.rule-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 1rem);
+    margin-bottom: 1rem;
+}
+
+.rule-card h3 {
+    margin-top: 0;
+    color: #0d3b66;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.rule-section {
+    margin-bottom: 1rem;
+}
+
+.error-reasoning {
+    padding: 1rem;
+}
+
+.error-reasoning h3, .error-reasoning h4 {
+    color: #0d3b66;
+    margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .workflow-card {
+        width: 100%;
+    }
+    
+    .rule-card {
+        width: 100%;
+    }
+}
